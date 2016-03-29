@@ -9,16 +9,44 @@
 #import "FirstTableViewController.h"
 #import "FirstTableViewCell.h"
 #import "DetailViewController.h"
-
+#import "FirstModel.h"
 @interface FindTableViewController ()
-
+@property(nonatomic,strong)NSMutableDictionary *diction;
+@property(nonatomic,strong)NSMutableArray *array;
 @end
 
 @implementation FindTableViewController
-
+-(NSMutableDictionary *)diction
+{
+    if (!_diction) {
+        _diction = [NSMutableDictionary dictionary];
+    }
+    return _diction;
+}
+-(NSMutableArray *)array
+{
+    if (!_array) {
+        _array = [NSMutableArray array];
+    }
+    return _array;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    AVQuery *query = [AVQuery queryWithClassName:@"Boy"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count == 0) {
+            return;
+        }else{
+            self.diction = objects[0];
+            NSArray *arr = self.diction[@"localData"];
+            for (NSDictionary *dic in arr) {
+                
+                FirstModel *model = [[FirstModel alloc]init];
+                [model setValuesForKeysWithDictionary:dic];
+                [self.array addObject:model];
+            }
+        }
+    }];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor blueColor]];
     self.navigationItem.title = @"标题";

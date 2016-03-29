@@ -15,7 +15,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
        self = [FirstTableViewCell makeCell];
-        //设置圆角
+        
+//        self = [[[NSBundle mainBundle]loadNibNamed:@"FirstTableViewCell" owner:self options:nil]lastObject];
+        
+//        设置圆角
         self.lb.layer.cornerRadius = self.lb.bounds.size.width/2;
         self.lb.layer.masksToBounds = YES;
         

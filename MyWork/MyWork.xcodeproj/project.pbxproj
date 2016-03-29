@@ -42,6 +42,7 @@
 		DB4727D61CA4DA0300E5AA9E /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727D51CA4DA0300E5AA9E /* ChatListViewController.m */; };
 		DB4727D91CA4DAE900E5AA9E /* ChatROOMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */; };
 		DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */; };
+		DB7A18A71CA633A300FDBD3A /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A18A61CA633A300FDBD3A /* FirstModel.m */; };
 		DBC015441CA37AAC00961E84 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC015431CA37AAC00961E84 /* 1.jpg */; };
 		DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */; };
 		DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8D1C9F803900A0E6B3 /* SecondViewController.m */; };
@@ -123,6 +124,8 @@
 		DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatROOMViewController.m; sourceTree = "<group>"; };
 		DB4727DA1CA4DB5900E5AA9E /* UserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFactory.h; sourceTree = "<group>"; };
 		DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFactory.m; sourceTree = "<group>"; };
+		DB7A18A51CA633A300FDBD3A /* FirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModel.h; sourceTree = "<group>"; };
+		DB7A18A61CA633A300FDBD3A /* FirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModel.m; sourceTree = "<group>"; };
 		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		DBEF2C8A1C9F803900A0E6B3 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				92403BB51C97B1680063911A /* FriendList */,
 				92403BC01C97B21B0063911A /* FindTableViewController.h */,
 				92403BC11C97B21B0063911A /* FindTableViewController.m */,
+				DB7A18A51CA633A300FDBD3A /* FirstModel.h */,
+				DB7A18A61CA633A300FDBD3A /* FirstModel.m */,
 				DBEF2C981C9F82E900A0E6B3 /* DetailViewController.h */,
 				DBEF2C991C9F82E900A0E6B3 /* DetailViewController.m */,
 				DBEF2C9A1C9F82E900A0E6B3 /* DetailViewController.xib */,
@@ -521,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7A18A71CA633A300FDBD3A /* FirstModel.m in Sources */,
 				92C6308D1CA544040098046D /* AppDelegate.m in Sources */,
 				92C6308E1CA544040098046D /* CustomTabBarVC.m in Sources */,
 				DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */,
@@ -646,11 +652,14 @@
 			baseConfigurationReference = A9E4A394CC499E369D6B3681 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyWork/PrefixHeader.pch";
 				INFOPLIST_FILE = MyWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haiyang.MyWork;
+				PRODUCT_BUNDLE_IDENTIFIER = Mywork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -659,11 +668,14 @@
 			baseConfigurationReference = EAB49CAAC66FB891734F3F05 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyWork/PrefixHeader.pch";
 				INFOPLIST_FILE = MyWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haiyang.MyWork;
+				PRODUCT_BUNDLE_IDENTIFIER = Mywork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
